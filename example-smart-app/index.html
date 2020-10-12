@@ -12,6 +12,7 @@
     -->
   </head>
   <body>
+    <p id="demo"></p>
     <div id='errors'>
     </div>
     <div id="loading" class="spinner">
@@ -96,6 +97,13 @@
           $('#errors').html('<p> Failed to call FHIR Service </p>');
         }
       );
+    </script>
+    <script type="text/javascript">
+      document.getElementById("holder").onload = function() {myFunction()};
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Iframe is loaded.";
+      }
     </script>
   </body>
 </html>
