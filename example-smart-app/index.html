@@ -11,8 +11,7 @@
       <link rel='stylesheet' type='text/css' href='./lib/css/cerner-smart-embeddable-lib-1.0.0.min.css'>
     -->
   </head>
-  <body>
-    <p id="demo"></p>
+  <body onload="myFunction()">
     <div id='errors'>
     </div>
     <div id="loading" class="spinner">
@@ -98,9 +97,7 @@
         }
       );
     </script>
-    <script type="text/javascript">
-      document.getElementById("holder").onload = function() {myFunction()};
-
+    <script>
       function myFunction() {
         alert('demo test');
       }
