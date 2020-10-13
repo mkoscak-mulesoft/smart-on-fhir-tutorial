@@ -99,7 +99,24 @@
     </script>
     <script>
       function myFunction() {
-        alert('demo test');
+        console.log('demo test');
+        return fetch(calloutURI, {
+            method: 'GET',
+            mode:'cors'
+        }).then((response) => {
+            return response.json();
+        }).then((obj) => {
+            let data = [];
+            for (let rowIndex in obj) {
+                let row = obj[rowIndex];
+                let record = {};
+                for(let field in row ){
+                        record[field] = row[field];
+                }
+                data.push(record);
+            }
+            return data;
+        });
       }
     </script>
   </body>
